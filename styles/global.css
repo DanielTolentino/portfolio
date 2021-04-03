@@ -58,7 +58,7 @@ section h2 {
 }
 
 header {
-	background-image: url(../public/images/code_bg1.jpg);
+	background-image: url(../public/images/codebg_1.webp);
 	background-size: cover;
 	border-radius: 10px;
 }
@@ -104,6 +104,8 @@ font-size: 16px;
 } */
 
 img {
+	background-image: url(../public/images/profile.webp);
+	background-size: cover;
 	width: 150px;
 	height: 150px;
 	border-radius:100%;	
