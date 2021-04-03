@@ -58,7 +58,7 @@ section h2 {
 }
 
 header {
-	background-image: url(https://techcrunch.com/wp-content/uploads/2015/04/codecode.jpg);
+	background-image: url(../public/images/code_bg1.jpg);
 	background-size: cover;
 	border-radius: 10px;
 }

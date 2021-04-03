@@ -46,7 +46,7 @@ export default function Home ({ allPostsData }) {
 import React from 'react'
 import Layout from '../components/layout'
 import MyDocument from '../pages/_document'
-
+import Image from 'next/image'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -54,7 +54,7 @@ export default class IndexPage extends React.Component {
           <Layout>
             <section>
 	<header>
-		<img src="https://unavatar.now.sh/github/DanielTolentino" />
+   <img src="https://unavatar.now.sh/github/DanielTolentino" />
 	</header>
 
 	<h1>Daniel Tolentino</h1>
