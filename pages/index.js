@@ -54,7 +54,7 @@ export default class IndexPage extends React.Component {
           <Layout>
             <section>
 	<header>
-   <img src="https://unavatar.now.sh/github/DanielTolentino" />
+  <img/>
 	</header>
 
 	<h1>Daniel Tolentino</h1>
