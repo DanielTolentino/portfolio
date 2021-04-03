@@ -59,7 +59,7 @@ export default class IndexPage extends React.Component {
 
 	<h1>Daniel Tolentino</h1>
 
-	<div>
+	<div className="div-meio">
 		<h2><a href="https://imersao.dev/" className="a-header" target="_blank">Insígnias da imersao.dev</a></h2>
 		<ol>
 			<li><a href="https://conversorimersaodev.netlify.app/" target="_blank">💰 Conversor de Moedas</a></li>
@@ -71,10 +71,10 @@ export default class IndexPage extends React.Component {
 			<li><a href="https://danieltolentino.github.io/" target="_blank">🌐 Certificard</a></li>
 		</ol>
 	</div>
-	<div class="div-buttons">
-		<a href="https://github.com/DanielTolentino" className="a-git" target="_blank">Github<i class="fab fa-github"></i></a>
-		<a href="https://www.facebook.com/Daniel.Tolentino0/" className="a-fb" target="_blank">Facebook</a>
-		<a href="https://www.instagram.com/daniel.tolentino.0/" className="a-insta" target="_blank">Instagram</a>
+	<div className="div-buttons">
+		<a href="https://github.com/DanielTolentino" className="a-git" target="_blank">Github <i class="fab fa-github"></i></a>
+		<a href="https://www.facebook.com/Daniel.Tolentino0/" className="a-fb" target="_blank">Facebook <i class="fab fa-facebook"></i></a>
+		<a href="https://www.instagram.com/daniel.tolentino.0/" className="a-insta" target="_blank">Instagram <i class="fab fa-instagram"></i></a>
 		
 	</div>
 </section>

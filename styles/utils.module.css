@@ -50,3 +50,10 @@
   .lightText {
     color: #666;
   }
+.div-meio {
+  padding: 15px;
+	border: 1px hidden black;
+	
+	background-color: #eef5fd;
+	border-radius: 2px;
+}

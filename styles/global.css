@@ -66,14 +66,18 @@ header {
 div {
 	padding: 15px;
 	border: 1px hidden black;
-	/* propriedade visual : valor */
-	background-color: #eef5fd;
 	border-radius: 2px;
 }
+.div-meio {
+	padding: 15px;
+	border: 1px hidden black;
+	background-color: #eef5fd;
+	border-radius: 2px;
+  }
 .div-buttons {
 	display: flex;
-	position: relative;
 	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: center;
 	font-family: 'FontAwesome';
 	margin-top: 10px;
@@ -138,6 +142,7 @@ a:link {
   }
 
   a.a-git{
+	  
 font-family: 'Roboto', 'FontAwesome';
 color: #457B9D;
 background-color: #24292E;
@@ -147,6 +152,7 @@ border: 1px hidden black;
 	
 border-radius: 2px;
 margin-right: 10px;
+margin-top: 10px;
 border-radius: 5%;
 border: none;
 color: white;
@@ -167,6 +173,7 @@ font-size: 16px;
 		
 	border-radius: 2px;
 	margin-right: 10px;
+	margin-top: 10px;
 	border-radius: 5%;
 	border: none;
 	color: white;
@@ -187,6 +194,7 @@ font-size: 16px;
 			
 		border-radius: 2px;
 		margin-right: 10px;
+		margin-top: 10px;
 		border-radius: 5%;
 		border: none;
 		color: white;
