@@ -1,4 +1,4 @@
-import Document, { Head, Main, NextScript } from 'next/document'
+import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 export default class MyDocument extends Document {
     static async getInitialProps(ctx) {
@@ -10,7 +10,7 @@ export default class MyDocument extends Document {
 
     render() {
         return (
-            <html>
+            <Html>
                 <Head>
                 <script src="https://kit.fontawesome.com/be47bb51ae.js" crossorigin="anonymous"></script>
                 </Head>
@@ -23,7 +23,7 @@ export default class MyDocument extends Document {
                         width: 25%;
                     }`}}></style>
                 </body>
-            </html>
+            </Html>
         );
     }
 }
