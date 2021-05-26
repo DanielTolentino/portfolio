@@ -51,13 +51,10 @@ import Image from 'next/image'
 export default class IndexPage extends React.Component {
   render() {
       return (
-          <Layout>
-	       <Head>
-        <title>Daniel Tolentino</title>
-      </Head>
-            <section>
+      <Layout>
+	<section>
 	<header>
-  <img/>
+  <img/>	    
 	</header>
 
 	<h1>Daniel Tolentino</h1>
