@@ -54,6 +54,7 @@ export default class IndexPage extends React.Component {
       <Layout>
 	<section>
 	<header>
+	      <title>Daniel Tolentino</title>
   <img/>	    
 	</header>
 
