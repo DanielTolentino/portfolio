@@ -52,6 +52,9 @@ export default class IndexPage extends React.Component {
   render() {
       return (
           <Layout>
+	       <Head>
+        <title>Daniel Tolentino</title>
+      </Head>
             <section>
 	<header>
   <img/>
