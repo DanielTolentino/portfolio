@@ -66,6 +66,10 @@ export default class IndexPage extends React.Component {
 		<a href="https://www.instagram.com/daniel.tolentino.0/" className="a-insta" target="_blank">Instagram <i class="fab fa-instagram"></i></a>
 		
 	</div>
+  <div className="div-meio">
+  <h2><a href="https://danieltolentinoblog.netlify.app/" className="a-header" target="_blank">✨Leia o meu Blog!✨</a></h2>
+		
+  </div>
 
 	<div className="div-meio">
 		<h2><a href="https://imersao.dev/" className="a-header" target="_blank">Insígnias da imersao.dev - Alura</a></h2>
