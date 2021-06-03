@@ -75,7 +75,7 @@ export default class IndexPage extends React.Component {
 		
 	</div>
   <div className="div-meio">
-  <h2><a href="https://danieltolentinoblog.netlify.app/" className="a-header" target="_blank">✨Leia o meu Blog - CLIQUE AQUI - !✨</a></h2>
+  <h2><a href="https://danieltolentinoblog.netlify.app/" className="a-header" target="_blank">✨Leia o meu Blog!✨</a></h2>
 		
   </div>
 
