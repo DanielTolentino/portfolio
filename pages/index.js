@@ -88,7 +88,7 @@ export default class IndexPage extends React.Component {
 			<li><a href="https://codepen.io/danieltolentino/full/dyNXKRm" target="_blank">🎬 - Aluraflix</a></li>
 			<li><a href="https://codepen.io/danieltolentino/full/OJWWbvE" target="_blank">🏆 - Tabela de Classificação</a></li>
 			<li><a href="https://codepen.io/danieltolentino/full/OJWpJdK" target="_blank">🃏 - Supertrunfo</a></li>
-			<li><a href="https://certificard.netlify.app/" target="_blank">🌐 - Certificard</a></li>
+			<li><a href="https://danieltolentino.netlify.app/" target="_blank">🌐 - Certificard</a></li>
 		</ol>
 	</div>
   <div className="div-meio2">
