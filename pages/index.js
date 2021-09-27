@@ -10,7 +10,7 @@ export default class IndexPage extends React.Component {
         <title>Daniel Tolentino</title>
         <meta property="og:title" content="Daniel Tolentino" key="title" />
       </Head>
-      
+
 	<section>
 	<header>
 	      <title>Daniel Tolentino</title>
@@ -26,7 +26,7 @@ export default class IndexPage extends React.Component {
 		
 	</div>
   <div className="div-meio">
-  <h2><a href="https://danieltolentinoblog.netlify.app/" className="a-header" target="_blank">✨Leia o meu Blog!✨</a></h2>
+  <h2><a href="https://danieltolentinoblog.netlify.app/" className="a-header" target="_blank">✨Leia o meu Blog✨</a></h2>
 		
   </div>
 
