@@ -1,8 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
 import Head from 'next/head'
-import MyDocument from '../pages/_document'
-import Image from 'next/image'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -12,9 +10,7 @@ export default class IndexPage extends React.Component {
         <title>Daniel Tolentino</title>
         <meta property="og:title" content="Daniel Tolentino" key="title" />
       </Head>
-      <Head>
-        <meta property="og:title" content="Daniel Tolentino" key="title" />
-      </Head>
+      
 	<section>
 	<header>
 	      <title>Daniel Tolentino</title>
