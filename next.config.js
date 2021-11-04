@@ -1,5 +1,5 @@
 module.exports = {
-    target:'serverless',
     webpack5: true,
+    swcMinify: true,
     generateBuildId: () => 'build',
 }
