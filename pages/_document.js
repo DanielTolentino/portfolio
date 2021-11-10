@@ -17,8 +17,8 @@ export default class MyDocument extends Document {
                 <body>
                     <Main />
                     <NextScript />
-                    <script src="https://kit.fontawesome.com/be47bb51ae.js" crossOrigin="anonymous"></script>
-                    <style dangerouslySetInnerHTML={{__html: `.owl-carousel {display: block;}.post_slider_inner.owl-carousel > .item {
+{/*                     <script src="https://kit.fontawesome.com/be47bb51ae.js" crossOrigin="anonymous"></script>
+ */}                    <style dangerouslySetInnerHTML={{__html: `.owl-carousel {display: block;}.post_slider_inner.owl-carousel > .item {
                         display: inline-block;
                         width: 25%;
                     }`}}></style>
