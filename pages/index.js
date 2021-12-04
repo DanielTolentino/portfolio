@@ -17,7 +17,7 @@ export default class IndexPage extends React.Component {
 	</header>
 
 	<h1>Daniel Tolentino</h1>
-  <h4>danieltolentino@pm.me</h4>
+  <h4><a href="mailto:danieltolentino@pm.me">danieltolentino@pm.me</a>.</h4>
   <div className="div-buttons">
 		<a href="https://github.com/DanielTolentino" className="a-git" target="_blank">Github <i class="fab fa-github"></i></a>
 		<a href="https://www.facebook.com/Daniel.Tolentino0/" className="a-fb" target="_blank">Facebook <i class="fab fa-facebook"></i></a>
