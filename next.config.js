@@ -1,5 +1,5 @@
 module.exports = {
     webpack5: true,
-    //swcMinify: true,
+    swcMinify: false,
     generateBuildId: () => 'build',
 }
