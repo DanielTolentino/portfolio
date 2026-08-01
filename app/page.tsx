@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element -- Project previews are local static captures displayed in responsive browser frames. */
+
 const whatsappUrl =
   "https://wa.me/5531995007170?text=Ol%C3%A1%2C%20Daniel!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20site.";
 
@@ -20,7 +22,7 @@ const projects: Project[] = [
     url: "https://marina-borges-psicologa.vercel.app/",
     preview: "/previews/marina-borges.png",
     objective:
-      "Criar um primeiro encontro digital acolhedor para quem está buscando apoio psicológico.",
+      "Criar um primeiro encontro digital acolhedor para pessoas em busca de apoio psicológico.",
     sections: "Apresentação · Abordagem · Modalidades de atendimento · FAQ · CTA",
     difference:
       "Uma experiência leve e humana, com ritmo editorial e linguagem que transmite confiança sem perder delicadeza.",
@@ -35,7 +37,7 @@ const projects: Project[] = [
       "Apresentar trajetória, interesses e personalidade em uma página pessoal direta e autoral.",
     sections: "Introdução · Sobre · Tecnologia · Links pessoais · Contato",
     difference:
-      "Uma linguagem minimalista que deixa a personalidade aparecer, com foco no conteúdo e na clareza da navegação.",
+      "Uma linguagem minimalista que valoriza a personalidade, o conteúdo e a clareza da navegação.",
   },
   {
     number: "03",
@@ -56,7 +58,7 @@ const projects: Project[] = [
     url: "https://codar-me-maratona-starter-veterinaria.vercel.app/",
     preview: "/previews/lovet-veterinaria.png",
     objective:
-      "Transmitir cuidado e segurança para tutores que procuram um lugar confiável para seus pets.",
+      "Transmitir cuidado e segurança a tutores que procuram um lugar confiável para seus pets.",
     sections: "Hero · Serviços · Localização · CTA · Rodapé institucional",
     difference:
       "Uma direção visual calorosa e objetiva, feita para comunicar carinho logo no primeiro olhar.",
@@ -91,17 +93,17 @@ const process = [
   {
     number: "01",
     title: "Entender",
-    text: "A gente começa pela sua história, pelo seu público e pelo que o site precisa fazer acontecer.",
+    text: "Começamos pela sua história, pelo seu público e pela ação que o site precisa gerar.",
   },
   {
     number: "02",
-    title: "Construir",
-    text: "Transformo estratégia em uma interface clara, bonita e com a personalidade certa para sua marca.",
+    title: "Criar",
+    text: "Transformo estratégia em uma interface clara, bonita e alinhada à personalidade da sua marca.",
   },
   {
     number: "03",
     title: "Publicar",
-    text: "Depois dos ajustes finais, seu site fica pronto para ser encontrado, compartilhado e lembrado.",
+    text: "Depois dos ajustes finais, seu site fica pronto para ser encontrado, compartilhado e gerar novas conversas.",
   },
 ];
 
@@ -118,7 +120,7 @@ export default function Home() {
           <a href="#processo">Como trabalho</a>
           <a href="#contato">Contato</a>
         </nav>
-        <a className="header-cta" href={whatsappUrl} target="_blank" rel="noreferrer">
+        <a className="header-cta" href={whatsappUrl} target="_blank" rel="noopener noreferrer">
           Vamos conversar <span aria-hidden="true">↗</span>
         </a>
       </header>
@@ -130,14 +132,14 @@ export default function Home() {
             Sites que transformam <em>boas ideias</em> em presença digital.
           </h1>
           <p className="hero-lede">
-            Crio experiências bonitas, rápidas e pensadas para aproximar negócios das pessoas certas. Conheça alguns projetos e imagine o que podemos construir para a sua marca.
+            Transformo estratégia, conteúdo e identidade em sites rápidos, claros e memoráveis — feitos para apresentar seu negócio, transmitir confiança e gerar conversas.
           </p>
           <div className="hero-actions">
             <a className="button button-dark" href="#projetos">Ver projetos <span aria-hidden="true">↓</span></a>
-            <a className="text-link" href={whatsappUrl} target="_blank" rel="noreferrer">Quero meu site <span aria-hidden="true">↗</span></a>
+            <a className="text-link" href={whatsappUrl} target="_blank" rel="noopener noreferrer">Quero meu site <span aria-hidden="true">↗</span></a>
           </div>
         </div>
-        <div className="hero-aside" aria-label="Resumo do portfólio">
+        <div className="hero-aside" aria-label="Monograma de Daniel Tolentino">
           <div className="hero-orbit orbit-one" />
           <div className="hero-orbit orbit-two" />
           <div className="hero-monogram">DT<span>®</span></div>
@@ -158,13 +160,13 @@ export default function Home() {
             <p className="eyebrow"><span /> Seleção de trabalhos</p>
             <h2>Projetos com <em>propósito.</em></h2>
           </div>
-          <p className="section-intro">Cada projeto começa com uma necessidade diferente. O resultado é um site que faz sentido para quem cria e para quem visita.</p>
+          <p className="section-intro">Cada projeto resolve uma necessidade diferente. O resultado é um site com intenção, clareza e uma experiência que faz sentido para quem visita.</p>
         </div>
 
         <div className="projects-list">
           {projects.map((project, index) => (
             <article className={`project-card ${index % 2 === 1 ? "project-card-reverse" : ""}`} key={project.title}>
-              <a className="project-preview" href={project.url} target="_blank" rel="noreferrer" aria-label={`Abrir ${project.title}`}>
+              <a className="project-preview" href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`Abrir ${project.title}`}>
                 <span className="browser-bar"><i /><i /><i /><small>{project.url.replace("https://", "")}</small></span>
                 <img src={project.preview} alt={`Preview do site ${project.title}`} />
                 <span className="preview-overlay">Ver projeto <span aria-hidden="true">↗</span></span>
@@ -177,7 +179,7 @@ export default function Home() {
                   <div><dt>Seções criadas</dt><dd>{project.sections}</dd></div>
                   <div><dt>Diferencial visual</dt><dd>{project.difference}</dd></div>
                 </dl>
-                <a className="project-link" href={project.url} target="_blank" rel="noreferrer">Visitar projeto <span aria-hidden="true">↗</span></a>
+                <a className="project-link" href={project.url} target="_blank" rel="noopener noreferrer">Visitar projeto <span aria-hidden="true">↗</span></a>
               </div>
             </article>
           ))}
@@ -203,9 +205,9 @@ export default function Home() {
       <section className="contact-section" id="contato">
         <div className="contact-inner">
           <p className="eyebrow eyebrow-light"><span /> Vamos criar algo juntos?</p>
-          <h2>Seu próximo site pode ser o próximo projeto <em>daqui.</em></h2>
-          <p>Se você quer um site com personalidade, clareza e propósito, me conte sua ideia. Eu cuido da experiência do primeiro rascunho até a publicação.</p>
-          <a className="button button-light" href={whatsappUrl} target="_blank" rel="noreferrer">Falar comigo no WhatsApp <span aria-hidden="true">↗</span></a>
+          <h2>Seu próximo site merece começar com uma <em>boa conversa.</em></h2>
+          <p>Tem um projeto em mente? Vamos transformá-lo em um site que apresenta valor, transmite confiança e convida as pessoas a entrar em contato.</p>
+          <a className="button button-light" href={whatsappUrl} target="_blank" rel="noopener noreferrer">Falar comigo no WhatsApp <span aria-hidden="true">↗</span></a>
         </div>
         <div className="contact-asterisk" aria-hidden="true">✳</div>
       </section>
@@ -213,7 +215,7 @@ export default function Home() {
       <footer className="site-footer">
         <a className="wordmark" href="#inicio"><span className="wordmark-mark">DT</span><span>Daniel Tolentino</span></a>
         <p>Sites que aproximam pessoas e boas ideias.</p>
-        <a className="footer-phone" href={whatsappUrl} target="_blank" rel="noreferrer">+55 31 99500-7170 <span aria-hidden="true">↗</span></a>
+        <a className="footer-phone" href={whatsappUrl} target="_blank" rel="noopener noreferrer">+55 31 99500-7170 <span aria-hidden="true">↗</span></a>
       </footer>
     </main>
   );
