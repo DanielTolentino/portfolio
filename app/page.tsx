@@ -140,7 +140,6 @@ export default function Home() {
         <div className="hero-aside" aria-label="Resumo do portfólio">
           <div className="hero-orbit orbit-one" />
           <div className="hero-orbit orbit-two" />
-          <div className="hero-note note-top">06 projetos<br /><strong>no ar</strong></div>
           <div className="hero-monogram">DT<span>®</span></div>
           <div className="hero-note note-bottom">web feito com<br /><strong>intenção</strong></div>
         </div>
