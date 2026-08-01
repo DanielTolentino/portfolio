@@ -17,6 +17,18 @@ export default defineConfig(async () => {
   process.env.WRANGLER_LOG_PATH ??= ".wrangler/logs";
   process.env.MINIFLARE_REGISTRY_PATH ??= ".wrangler/registry";
 
+  // Vercel runs the app through Nitro. Cloudflare/Sites remains the default
+  // local target so the existing preview workflow keeps working unchanged.
+  const isVercel = process.env.VERCEL === "1" || process.env.NITRO_PRESET === "vercel";
+
+  if (isVercel) {
+    const { nitro } = await import("nitro/vite");
+
+    return {
+      plugins: [vinext(), nitro()],
+    };
+  }
+
   // Wrangler snapshots its log path while the Cloudflare plugin is imported.
   const { cloudflare } = await import("@cloudflare/vite-plugin");
 
