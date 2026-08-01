@@ -29,6 +29,18 @@ const projects: Project[] = [
   },
   {
     number: "02",
+    title: "Crochê Arte",
+    category: "Artesanato · Landing page",
+    url: "https://croche-arte.vercel.app/",
+    preview: "/previews/croche-arte.png",
+    objective:
+      "Apresentar o trabalho artesanal da Eliana e transformar o interesse por uma peça em uma conversa pelo WhatsApp.",
+    sections: "Hero · Sobre · Criações · Encomendas · Diferenciais · FAQ",
+    difference:
+      "Uma identidade delicada e autoral, com fotografia real, ritmo editorial e chamadas para ação que valorizam o feito à mão.",
+  },
+  {
+    number: "03",
     title: "Daniel Tolentino",
     category: "Marca pessoal · Portfólio",
     url: "https://danieltolentino.net/",
@@ -40,7 +52,7 @@ const projects: Project[] = [
       "Uma linguagem minimalista que valoriza a personalidade, o conteúdo e a clareza da navegação.",
   },
   {
-    number: "03",
+    number: "04",
     title: "MyHub",
     category: "Produtividade · Hub pessoal",
     url: "https://hub.danieltolentino.net/",
@@ -52,7 +64,7 @@ const projects: Project[] = [
       "Uma interface funcional e compacta, pensada para transformar muitos destinos em uma experiência simples.",
   },
   {
-    number: "04",
+    number: "05",
     title: "Lovet",
     category: "Veterinária · Landing page",
     url: "https://codar-me-maratona-starter-veterinaria.vercel.app/",
@@ -64,7 +76,7 @@ const projects: Project[] = [
       "Uma direção visual calorosa e objetiva, feita para comunicar carinho logo no primeiro olhar.",
   },
   {
-    number: "05",
+    number: "06",
     title: "Blog Daniel Tolentino",
     category: "Conteúdo · Blog pessoal",
     url: "https://blog.danieltolentino.net/",
@@ -76,7 +88,7 @@ const projects: Project[] = [
       "Uma estética escura e editorial que coloca a escrita no centro e dá ao conteúdo uma presença memorável.",
   },
   {
-    number: "06",
+    number: "07",
     title: "SirBarber",
     category: "Barbearia · Landing page",
     url: "https://codar-me-maratona-starter-barbearia.vercel.app/",

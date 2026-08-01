@@ -26,16 +26,17 @@ test("server-renders the Daniel Tolentino portfolio", async () => {
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
 });
 
-test("includes all six project previews and the social card", async () => {
+test("includes all seven project previews and the social card", async () => {
   const [page, layout] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
   ]);
 
-  for (const name of ["Marina Borges", "Daniel Tolentino", "MyHub", "Lovet", "Blog Daniel Tolentino", "SirBarber"]) {
+  for (const name of ["Marina Borges", "Crochê Arte", "Daniel Tolentino", "MyHub", "Lovet", "Blog Daniel Tolentino", "SirBarber"]) {
     assert.match(page, new RegExp(name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
   }
   assert.match(page, /marina-borges\.png/);
+  assert.match(page, /croche-arte\.png/);
   assert.match(page, /sirbarber\.png/);
   assert.match(page, /wa\.me\/5531995007170/);
   assert.match(layout, /og\.png/);
