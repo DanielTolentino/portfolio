@@ -73,10 +73,27 @@ test("includes all seven project previews and the social card", async () => {
   for (const name of ["Marina Borges", "Crochê Arte", "Daniel Tolentino", "MyHub", "Lovet", "Blog Daniel Tolentino", "SirBarber"]) {
     assert.match(page, new RegExp(name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
   }
-  assert.match(page, /marina-borges\.png/);
-  assert.match(page, /croche-arte\.png/);
-  assert.match(page, /sirbarber\.png/);
+  assert.match(page, /marina-borges\.jpg/);
+  assert.match(page, /croche-arte\.jpg/);
+  assert.match(page, /sirbarber\.jpg/);
   assert.match(page, /wa\.me\/5531995007170/);
   assert.match(layout, /og\.png/);
   assert.match(layout, /lang="pt-BR"|<html lang="pt-BR">/);
+});
+
+test("includes accessible structure and optimized project previews", async () => {
+  const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const styles = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+
+  assert.match(page, /className="skip-link"/);
+  assert.match(page, /<main id="conteudo-principal">/);
+  assert.match(page, /<header className="site-header">/);
+  assert.match(page, /<footer className="site-footer">/);
+  assert.match(page, /loading="lazy"/);
+  assert.match(page, /decoding="async"/);
+  assert.match(page, /width=\{project\.previewWidth\}/);
+  assert.match(page, /height=\{project\.previewHeight\}/);
+  assert.doesNotMatch(page, /\/previews\/[^"']+\.png/);
+  assert.match(styles, /:focus-visible\s*\{/);
+  assert.match(styles, /prefers-reduced-motion\s*:\s*reduce/);
 });
