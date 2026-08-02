@@ -19,7 +19,7 @@ const projects: Project[] = [
     number: "01",
     title: "Marina Borges",
     category: "Psicologia · Site profissional",
-    url: "https://marina-borges-psicologa.vercel.app/",
+    url: "https://psimarinaborges.com.br/",
     preview: "/previews/marina-borges.png",
     objective:
       "Criar um primeiro encontro digital acolhedor para pessoas em busca de apoio psicológico.",
