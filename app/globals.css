@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap');
 :root {
+  color-scheme: light dark;
   --cream: #f4edde;
   --cream-deep: #e9ddc9;
   --olive: #4b5638;
@@ -8,6 +9,35 @@
   --ink: #20251d;
   --muted: #6d705f;
   --line: rgba(32, 37, 29, .18);
+  --body-copy: #4e5446;
+  --section-copy: #565b4d;
+  --strip-line: rgba(244,237,222,.45);
+  --browser-bar: rgba(244,237,222,.88);
+  --contact-soft: #bbc79e;
+  --contact-copy: #d7ddca;
+  --contact-asterisk: #677452;
+  --button-light-hover: #fffaf0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cream: #182019;
+    --cream-deep: #222c21;
+    --olive: #9eaf78;
+    --olive-dark: #748653;
+    --olive-soft: #b5c58f;
+    --ink: #f1eadb;
+    --muted: #c0c4ad;
+    --line: rgba(241, 234, 219, .24);
+    --body-copy: #d4d5c5;
+    --section-copy: #d8d9c9;
+    --strip-line: rgba(241,234,219,.45);
+    --browser-bar: rgba(34,44,33,.92);
+    --contact-soft: #d0e0a8;
+    --contact-copy: #e6e8d8;
+    --contact-asterisk: #5f7048;
+    --button-light-hover: #fff7e5;
+  }
 }
 
 * { box-sizing: border-box; }
@@ -32,7 +62,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .eyebrow span { background: var(--olive-soft); display: inline-block; height: 7px; width: 7px; }
 .hero h1 { font-family: 'Instrument Serif', serif; font-size: clamp(66px, 7.4vw, 116px); font-weight: 400; letter-spacing: -.055em; line-height: .88; margin: 0; max-width: 850px; }
 h1 em, h2 em { color: var(--olive); font-style: italic; }
-.hero-lede { color: #4e5446; font-size: 18px; line-height: 1.65; margin: 38px 0 35px; max-width: 540px; }
+.hero-lede { color: var(--body-copy); font-size: 18px; line-height: 1.65; margin: 38px 0 35px; max-width: 540px; }
 .hero-actions { align-items: center; display: flex; gap: 29px; }
 .button { align-items: center; display: inline-flex; font-size: 12px; font-weight: 800; gap: 13px; justify-content: center; letter-spacing: .06em; padding: 18px 22px; text-transform: uppercase; transition: transform .25s ease, background .25s ease; }
 .button:hover { transform: translateY(-2px); }
@@ -53,21 +83,21 @@ h1 em, h2 em { color: var(--olive); font-style: italic; }
 
 .intro-strip { align-items: center; background: var(--olive); color: var(--cream); display: flex; gap: 30px; min-height: 76px; padding: 0 max(42px, calc((100vw - 1236px) / 2)); }
 .intro-strip p { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: .1em; margin: 0; text-transform: uppercase; white-space: nowrap; }
-.strip-line { background: rgba(244,237,222,.45); flex: 1; height: 1px; }
+.strip-line { background: var(--strip-line); flex: 1; height: 1px; }
 .strip-arrow { font-size: 20px; margin-left: 20px; }
 
 .projects-section { margin: 0 auto; max-width: 1320px; padding: 130px 42px 160px; }
 .section-heading { align-items: end; display: flex; justify-content: space-between; margin-bottom: 96px; }
 .section-heading .eyebrow { margin-bottom: 22px; }
 h2 { font-family: 'Instrument Serif', serif; font-size: clamp(52px, 6.5vw, 95px); font-weight: 400; letter-spacing: -.055em; line-height: .88; margin: 0; }
-.section-intro { color: #565b4d; font-size: 16px; line-height: 1.65; margin: 0 0 3px; max-width: 330px; }
+.section-intro { color: var(--section-copy); font-size: 16px; line-height: 1.65; margin: 0 0 3px; max-width: 330px; }
 .projects-list { display: grid; gap: 138px; }
 .project-card { align-items: center; display: grid; gap: clamp(45px, 8vw, 125px); grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr); }
 .project-card-reverse { grid-template-columns: minmax(280px, .85fr) minmax(0, 1.15fr); }
 .project-card-reverse .project-preview { grid-column: 2; grid-row: 1; }
 .project-card-reverse .project-info { grid-column: 1; grid-row: 1; }
 .project-preview { background: var(--cream-deep); display: block; overflow: hidden; padding-top: 16px; position: relative; }
-.browser-bar { align-items: center; background: rgba(244,237,222,.88); display: flex; gap: 5px; height: 16px; left: 0; padding: 0 10px; position: absolute; right: 0; top: 0; z-index: 2; }
+.browser-bar { align-items: center; background: var(--browser-bar); display: flex; gap: 5px; height: 16px; left: 0; padding: 0 10px; position: absolute; right: 0; top: 0; z-index: 2; }
 .browser-bar i { background: var(--olive-soft); border-radius: 50%; display: block; height: 4px; opacity: .65; width: 4px; }
 .browser-bar small { color: var(--muted); font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: .03em; margin-left: 9px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .project-preview img { display: block; filter: saturate(.82); height: auto; transition: transform .6s cubic-bezier(.2,.8,.2,1), filter .4s ease; width: 100%; }
@@ -83,7 +113,7 @@ h2 { font-family: 'Instrument Serif', serif; font-size: clamp(52px, 6.5vw, 95px)
 .project-details > div { border-top: 1px solid var(--line); display: grid; gap: 24px; grid-template-columns: 122px 1fr; padding: 16px 0; }
 .project-details > div:last-child { border-bottom: 1px solid var(--line); }
 .project-details dt { color: var(--olive-soft); font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .08em; line-height: 1.5; text-transform: uppercase; }
-.project-details dd { color: #4e5446; font-size: 15px; line-height: 1.65; margin: 0; }
+.project-details dd { color: var(--body-copy); font-size: 15px; line-height: 1.65; margin: 0; }
 .project-link { display: inline-block; margin-top: 29px; }
 
 .process-section { background: var(--cream-deep); padding: 130px max(42px, calc((100vw - 1236px) / 2)) 140px; }
@@ -93,18 +123,18 @@ h2 { font-family: 'Instrument Serif', serif; font-size: clamp(52px, 6.5vw, 95px)
 .process-step { border-top: 1px solid var(--olive-soft); padding-top: 17px; }
 .step-number { color: var(--olive-soft); font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .08em; }
 .process-step h3 { font-family: 'Instrument Serif', serif; font-size: 41px; font-weight: 400; letter-spacing: -.04em; margin: 38px 0 12px; }
-.process-step p { color: #565b4d; font-size: 15px; line-height: 1.7; margin: 0; max-width: 290px; }
+.process-step p { color: var(--section-copy); font-size: 15px; line-height: 1.7; margin: 0; max-width: 290px; }
 
 .contact-section { background: var(--olive); color: var(--cream); min-height: 485px; overflow: hidden; padding: 110px max(42px, calc((100vw - 1236px) / 2)); position: relative; }
 .contact-inner { max-width: 680px; position: relative; z-index: 1; }
-.eyebrow-light { color: #bbc79e; }
-.eyebrow-light span { background: #bbc79e; }
+.eyebrow-light { color: var(--contact-soft); }
+.eyebrow-light span { background: var(--contact-soft); }
 .contact-section h2 { color: var(--cream); font-size: clamp(50px, 6.4vw, 92px); }
-.contact-section h2 em { color: #bbc79e; }
-.contact-section p:not(.eyebrow) { color: #d7ddca; font-size: 17px; line-height: 1.65; margin: 34px 0 32px; max-width: 520px; }
+.contact-section h2 em { color: var(--contact-soft); }
+.contact-section p:not(.eyebrow) { color: var(--contact-copy); font-size: 17px; line-height: 1.65; margin: 34px 0 32px; max-width: 520px; }
 .button-light { background: var(--cream); color: var(--olive-dark); }
-.button-light:hover { background: #fffaf0; }
-.contact-asterisk { bottom: -58px; color: #677452; font-family: 'Instrument Serif', serif; font-size: 310px; line-height: 1; position: absolute; right: 7%; transform: rotate(21deg); }
+.button-light:hover { background: var(--button-light-hover); }
+.contact-asterisk { bottom: -58px; color: var(--contact-asterisk); font-family: 'Instrument Serif', serif; font-size: 310px; line-height: 1; position: absolute; right: 7%; transform: rotate(21deg); }
 .site-footer { align-items: center; display: flex; justify-content: space-between; margin: 0 auto; max-width: 1320px; padding: 32px 42px 40px; }
 .site-footer p { color: var(--muted); font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .08em; margin: 0; text-transform: uppercase; }
 .footer-phone { border-bottom: 1px solid var(--ink); padding-bottom: 5px; }

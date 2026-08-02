@@ -19,11 +19,49 @@ test("server-renders the Daniel Tolentino portfolio", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /Daniel Tolentino/);
-  assert.match(html, /Sites que transformam/);
-  assert.match(html, /Projetos com/);
-  assert.match(html, /Falar comigo no WhatsApp/);
+  for (const content of [
+    "Daniel Tolentino",
+    "Sites que transformam",
+    "Projetos com",
+    "Como acontece",
+    "Entender",
+    "Criar",
+    "Publicar",
+    "Falar comigo no WhatsApp",
+    "Sites que aproximam pessoas e boas ideias.",
+  ]) {
+    assert.match(html, new RegExp(content.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")), `missing rendered content: ${content}`);
+  }
+
+  for (const project of [
+    "Marina Borges",
+    "Crochê Arte",
+    "Daniel Tolentino",
+    "MyHub",
+    "Lovet",
+    "Blog Daniel Tolentino",
+    "SirBarber",
+  ]) {
+    assert.match(html, new RegExp(project.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")), `missing rendered project: ${project}`);
+  }
+
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
+});
+
+test("defines automatic dark mode in CSS without requiring a browser", async () => {
+  const styles = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+
+  assert.match(
+    styles,
+    /:root\s*\{[\s\S]*?color-scheme\s*:\s*light\s+dark\s*;[\s\S]*?\}/,
+    "global color-scheme declaration is missing",
+  );
+
+  const darkMode = styles.match(
+    /@media\s*\(\s*prefers-color-scheme\s*:\s*dark\s*\)\s*\{([\s\S]*)\}/,
+  );
+  assert.ok(darkMode, "automatic dark-mode media query is missing");
+  assert.match(darkMode[1], /--[\w-]+\s*:/, "dark mode must override theme values");
 });
 
 test("includes all seven project previews and the social card", async () => {
