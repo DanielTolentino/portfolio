@@ -143,7 +143,7 @@ h2 { font-family: 'Instrument Serif', serif; font-size: clamp(52px, 6.5vw, 95px)
   .site-header { padding: 22px 22px; }
   .desktop-nav { display: none; }
   .header-cta { font-size: 10px; }
-  .hero { display: block; min-height: 0; padding: 72px 22px 70px; }
+  .hero { display: block; min-height: 0; padding: 18px 22px 58px; }
   .hero h1 { font-size: clamp(60px, 17vw, 108px); }
   .hero-lede { font-size: 17px; line-height: 1.6; margin-top: 28px; }
   .hero-aside { min-height: 270px; }
@@ -151,7 +151,7 @@ h2 { font-family: 'Instrument Serif', serif; font-size: clamp(52px, 6.5vw, 95px)
   .orbit-two { height: 340px; width: 165px; }
   .hero-monogram { font-size: 180px; }
   .note-top { right: 7%; top: 12%; }
-  .note-bottom { bottom: 9%; left: 8%; }
+  .note-bottom { background: var(--cream); bottom: 0; left: 50%; padding: 3px 8px 4px; text-align: center; transform: translateX(-50%); white-space: nowrap; }
   .intro-strip { gap: 12px; min-height: 66px; padding: 0 22px; }
   .intro-strip p { font-size: 9px; line-height: 1.5; white-space: normal; }
   .strip-line { display: none; }
