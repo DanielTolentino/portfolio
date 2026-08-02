@@ -9,6 +9,8 @@ type Project = {
   category: string;
   url: string;
   preview: string;
+  previewWidth: number;
+  previewHeight: number;
   objective: string;
   sections: string;
   difference: string;
@@ -20,7 +22,9 @@ const projects: Project[] = [
     title: "Marina Borges",
     category: "Psicologia · Site profissional",
     url: "https://psimarinaborges.com.br/",
-    preview: "/previews/marina-borges.png",
+    preview: "/previews/marina-borges.jpg",
+    previewWidth: 1905,
+    previewHeight: 904,
     objective:
       "Criar um primeiro encontro digital acolhedor para pessoas em busca de apoio psicológico.",
     sections: "Apresentação · Abordagem · Modalidades de atendimento · FAQ · CTA",
@@ -32,7 +36,9 @@ const projects: Project[] = [
     title: "Crochê Arte",
     category: "Artesanato · Landing page",
     url: "https://croche-arte.vercel.app/",
-    preview: "/previews/croche-arte.png",
+    preview: "/previews/croche-arte.jpg",
+    previewWidth: 1905,
+    previewHeight: 904,
     objective:
       "Apresentar o trabalho artesanal da Eliana e transformar o interesse por uma peça em uma conversa pelo WhatsApp.",
     sections: "Hero · Sobre · Criações · Encomendas · Diferenciais · FAQ",
@@ -44,7 +50,9 @@ const projects: Project[] = [
     title: "Daniel Tolentino",
     category: "Marca pessoal · Portfólio",
     url: "https://danieltolentino.net/",
-    preview: "/previews/daniel-tolentino.png",
+    preview: "/previews/daniel-tolentino.jpg",
+    previewWidth: 1920,
+    previewHeight: 911,
     objective:
       "Apresentar trajetória, interesses e personalidade em uma página pessoal direta e autoral.",
     sections: "Introdução · Sobre · Tecnologia · Links pessoais · Contato",
@@ -56,7 +64,9 @@ const projects: Project[] = [
     title: "MyHub",
     category: "Produtividade · Hub pessoal",
     url: "https://hub.danieltolentino.net/",
-    preview: "/previews/myhub.png",
+    preview: "/previews/myhub.jpg",
+    previewWidth: 1905,
+    previewHeight: 904,
     objective:
       "Reunir ferramentas, informações e atalhos importantes em um único ponto de acesso.",
     sections: "Clima · Atalhos · Ferramentas · Links úteis · Utilidades rápidas",
@@ -68,7 +78,9 @@ const projects: Project[] = [
     title: "Lovet",
     category: "Veterinária · Landing page",
     url: "https://codar-me-maratona-starter-veterinaria.vercel.app/",
-    preview: "/previews/lovet-veterinaria.png",
+    preview: "/previews/lovet-veterinaria.jpg",
+    previewWidth: 1905,
+    previewHeight: 904,
     objective:
       "Transmitir cuidado e segurança a tutores que procuram um lugar confiável para seus pets.",
     sections: "Hero · Serviços · Localização · CTA · Rodapé institucional",
@@ -80,7 +92,9 @@ const projects: Project[] = [
     title: "Blog Daniel Tolentino",
     category: "Conteúdo · Blog pessoal",
     url: "https://blog.danieltolentino.net/",
-    preview: "/previews/daniel-blog.png",
+    preview: "/previews/daniel-blog.jpg",
+    previewWidth: 1905,
+    previewHeight: 904,
     objective:
       "Criar um espaço próprio para publicar ideias sobre tecnologia, criatividade e o que inspira no caminho.",
     sections: "Manifesto · Lista de posts · Leitura · Navegação de conteúdo",
@@ -92,7 +106,9 @@ const projects: Project[] = [
     title: "SirBarber",
     category: "Barbearia · Landing page",
     url: "https://codar-me-maratona-starter-barbearia.vercel.app/",
-    preview: "/previews/sirbarber.png",
+    preview: "/previews/sirbarber.jpg",
+    previewWidth: 1905,
+    previewHeight: 904,
     objective:
       "Transformar a visita ao site em vontade de agendar um horário e conhecer o espaço.",
     sections: "Hero · Serviços · Localização · Agendamento · Redes sociais",
@@ -121,7 +137,10 @@ const process = [
 
 export default function Home() {
   return (
-    <main>
+    <>
+      <a className="skip-link" href="#conteudo-principal">
+        Pular para o conteúdo principal
+      </a>
       <header className="site-header">
         <a className="wordmark" href="#inicio" aria-label="Voltar ao início">
           <span className="wordmark-mark">DT</span>
@@ -137,98 +156,108 @@ export default function Home() {
         </a>
       </header>
 
-      <section className="hero" id="inicio">
-        <div className="hero-copy">
-          <p className="eyebrow"><span /> Designer &amp; Desenvolvedor Web</p>
-          <h1>
-            Sites que transformam <em>boas ideias</em> em presença digital.
-          </h1>
-          <p className="hero-lede">
-            Transformo estratégia, conteúdo e identidade em sites rápidos, claros e memoráveis — feitos para apresentar seu negócio, transmitir confiança e gerar conversas.
-          </p>
-          <div className="hero-actions">
-            <a className="button button-dark" href="#projetos">Ver projetos <span aria-hidden="true">↓</span></a>
-            <a className="text-link" href={whatsappUrl} target="_blank" rel="noopener noreferrer">Quero meu site <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-        <div className="hero-aside" aria-label="Monograma de Daniel Tolentino">
-          <div className="hero-orbit orbit-one" />
-          <div className="hero-orbit orbit-two" />
-          <div className="hero-monogram">DT<span>®</span></div>
-          <div className="hero-note note-bottom">web feito com<br /><strong>intenção</strong></div>
-        </div>
-      </section>
-
-      <section className="intro-strip" aria-label="Resumo do trabalho">
-        <p>Do primeiro rascunho ao site no ar</p>
-        <span className="strip-line" />
-        <p>Design com clareza, código com cuidado</p>
-        <span className="strip-arrow" aria-hidden="true">↓</span>
-      </section>
-
-      <section className="projects-section" id="projetos">
-        <div className="section-heading">
-          <div>
-            <p className="eyebrow"><span /> Seleção de trabalhos</p>
-            <h2>Projetos com <em>propósito.</em></h2>
-          </div>
-          <p className="section-intro">Cada projeto resolve uma necessidade diferente. O resultado é um site com intenção, clareza e uma experiência que faz sentido para quem visita.</p>
-        </div>
-
-        <div className="projects-list">
-          {projects.map((project, index) => (
-            <article className={`project-card ${index % 2 === 1 ? "project-card-reverse" : ""}`} key={project.title}>
-              <a className="project-preview" href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`Abrir ${project.title}`}>
-                <span className="browser-bar"><i /><i /><i /><small>{project.url.replace("https://", "")}</small></span>
-                <img src={project.preview} alt={`Preview do site ${project.title}`} />
-                <span className="preview-overlay">Ver projeto <span aria-hidden="true">↗</span></span>
-              </a>
-              <div className="project-info">
-                <div className="project-kicker"><span>{project.number}</span><span>{project.category}</span></div>
-                <h3>{project.title}</h3>
-                <dl className="project-details">
-                  <div><dt>Objetivo</dt><dd>{project.objective}</dd></div>
-                  <div><dt>Seções criadas</dt><dd>{project.sections}</dd></div>
-                  <div><dt>Diferencial visual</dt><dd>{project.difference}</dd></div>
-                </dl>
-                <a className="project-link" href={project.url} target="_blank" rel="noopener noreferrer">Visitar projeto <span aria-hidden="true">↗</span></a>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="process-section" id="processo">
-        <div className="process-heading">
-          <p className="eyebrow"><span /> Como acontece</p>
-          <h2>Uma boa ideia merece<br /><em>um bom caminho.</em></h2>
-        </div>
-        <div className="process-grid">
-          {process.map((step) => (
-            <div className="process-step" key={step.number}>
-              <span className="step-number">{step.number}</span>
-              <h3>{step.title}</h3>
-              <p>{step.text}</p>
+      <main id="conteudo-principal">
+        <section className="hero" id="inicio" aria-labelledby="hero-title">
+          <div className="hero-copy">
+            <p className="eyebrow"><span /> Designer &amp; Desenvolvedor Web</p>
+            <h1 id="hero-title">
+              Sites que transformam <em>boas ideias</em> em presença digital.
+            </h1>
+            <p className="hero-lede">
+              Transformo estratégia, conteúdo e identidade em sites rápidos, claros e memoráveis — feitos para apresentar seu negócio, transmitir confiança e gerar conversas.
+            </p>
+            <div className="hero-actions">
+              <a className="button button-dark" href="#projetos">Ver projetos <span aria-hidden="true">↓</span></a>
+              <a className="text-link" href={whatsappUrl} target="_blank" rel="noopener noreferrer">Quero meu site <span aria-hidden="true">↗</span></a>
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+          <div className="hero-aside" aria-hidden="true">
+            <div className="hero-orbit orbit-one" />
+            <div className="hero-orbit orbit-two" />
+            <div className="hero-monogram">DT<span>®</span></div>
+            <div className="hero-note note-bottom">web feito com<br /><strong>intenção</strong></div>
+          </div>
+        </section>
 
-      <section className="contact-section" id="contato">
-        <div className="contact-inner">
-          <p className="eyebrow eyebrow-light"><span /> Vamos criar algo juntos?</p>
-          <h2>Seu próximo site merece começar com uma <em>boa conversa.</em></h2>
-          <p>Tem um projeto em mente? Vamos transformá-lo em um site que apresenta valor, transmite confiança e convida as pessoas a entrar em contato.</p>
-          <a className="button button-light" href={whatsappUrl} target="_blank" rel="noopener noreferrer">Falar comigo no WhatsApp <span aria-hidden="true">↗</span></a>
-        </div>
-        <div className="contact-asterisk" aria-hidden="true">✳</div>
-      </section>
+        <section className="intro-strip" aria-label="Resumo do trabalho">
+          <p>Do primeiro rascunho ao site no ar</p>
+          <span className="strip-line" />
+          <p>Design com clareza, código com cuidado</p>
+          <span className="strip-arrow" aria-hidden="true">↓</span>
+        </section>
+
+        <section className="projects-section" id="projetos" aria-labelledby="projetos-title">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow"><span /> Seleção de trabalhos</p>
+              <h2 id="projetos-title">Projetos com <em>propósito.</em></h2>
+            </div>
+            <p className="section-intro">Cada projeto resolve uma necessidade diferente. O resultado é um site com intenção, clareza e uma experiência que faz sentido para quem visita.</p>
+          </div>
+
+          <div className="projects-list">
+            {projects.map((project, index) => (
+              <article className={`project-card ${index % 2 === 1 ? "project-card-reverse" : ""}`} key={project.title}>
+                <a className="project-preview" href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`Abrir o projeto ${project.title} em uma nova aba`}>
+                  <span className="browser-bar" aria-hidden="true"><i /><i /><i /><small>{project.url.replace("https://", "")}</small></span>
+                  <img
+                    src={project.preview}
+                    alt={`Preview do site ${project.title}`}
+                    width={project.previewWidth}
+                    height={project.previewHeight}
+                    loading="lazy"
+                    decoding="async"
+                    sizes="(max-width: 800px) 100vw, 60vw"
+                  />
+                  <span className="preview-overlay">Ver projeto <span aria-hidden="true">↗</span></span>
+                </a>
+                <div className="project-info">
+                  <div className="project-kicker"><span>{project.number}</span><span>{project.category}</span></div>
+                  <h3>{project.title}</h3>
+                  <dl className="project-details">
+                    <div><dt>Objetivo</dt><dd>{project.objective}</dd></div>
+                    <div><dt>Seções criadas</dt><dd>{project.sections}</dd></div>
+                    <div><dt>Diferencial visual</dt><dd>{project.difference}</dd></div>
+                  </dl>
+                  <a className="project-link" href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`Visitar o projeto ${project.title} em uma nova aba`}>Visitar projeto <span aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="process-section" id="processo" aria-labelledby="processo-title">
+          <div className="process-heading">
+            <p className="eyebrow"><span /> Como acontece</p>
+            <h2 id="processo-title">Uma boa ideia merece<br /><em>um bom caminho.</em></h2>
+          </div>
+          <div className="process-grid">
+            {process.map((step) => (
+              <div className="process-step" key={step.number}>
+                <span className="step-number">{step.number}</span>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="contact-section" id="contato" aria-labelledby="contato-title">
+          <div className="contact-inner">
+            <p className="eyebrow eyebrow-light"><span /> Vamos criar algo juntos?</p>
+            <h2 id="contato-title">Seu próximo site merece começar com uma <em>boa conversa.</em></h2>
+            <p>Tem um projeto em mente? Vamos transformá-lo em um site que apresenta valor, transmite confiança e convida as pessoas a entrar em contato.</p>
+            <a className="button button-light" href={whatsappUrl} target="_blank" rel="noopener noreferrer">Falar comigo no WhatsApp <span aria-hidden="true">↗</span></a>
+          </div>
+          <div className="contact-asterisk" aria-hidden="true">✳</div>
+        </section>
+      </main>
 
       <footer className="site-footer">
         <a className="wordmark" href="#inicio"><span className="wordmark-mark">DT</span><span>Daniel Tolentino</span></a>
         <p>Sites que aproximam pessoas e boas ideias.</p>
         <a className="footer-phone" href={whatsappUrl} target="_blank" rel="noopener noreferrer">+55 31 99500-7170 <span aria-hidden="true">↗</span></a>
       </footer>
-    </main>
+    </>
   );
 }
